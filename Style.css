@@ -12,19 +12,19 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;  /* Allows wrapping when the screen is smaller */
+    flex-wrap: wrap; /* Allows wrapping when the screen is smaller */
 }
 
 .logo {
     width: 100%;
-    max-width: 200px;  /* Adjust the logo size for better responsiveness */
+    max-width: 200px; /* Adjust the logo size for better responsiveness */
     height: auto;
 }
 
 /* Navigation Menu */
 nav ul {
     display: flex;
-    list-style: none;  /* Remove bullets from list items */
+    list-style: none; /* Remove bullets from list items */
 }
 
 nav ul li {
@@ -88,7 +88,7 @@ nav ul li a {
 }
 
 .dropdown-content li a:hover {
-     /* Change background on hover */
+    /* Change background on hover */
     color: white; /* Change text color on hover */
 }
 
@@ -97,7 +97,6 @@ nav ul li a {
     display: block; /* Show the dropdown when hovering over portfolio */
 }
 
-/* Image Container */
 /* Image Container */
 .image-container {
     display: grid;
@@ -115,14 +114,45 @@ nav ul li a {
 
 /* Responsive Layout for smaller screens */
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: center; /* Center header items */
+        padding: 20px; /* Add some padding around the header */
+    }
+
+    nav ul.pages {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center the links */
+        margin-top: 10px; /* Add some margin above the links */
+    }
+
+    nav ul.pages li {
+        margin: 5px 0; /* Reduce margin between links */
+    }
+
     .image-container {
         grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
     }
-    
+
     .picture1, .picture2, .picture3, .picture4 {
         width: 90%; /* Increase image width slightly for smaller screens */
         max-width: 400px; /* Ensure images don't become too large on mobile */
         margin: 0; /* Reset margins for smaller screens */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack container items vertically */
+        align-items: center; /* Center the container items */
+    }
+
+    .social-links {
+        justify-content: center; /* Center social icons */
+        margin-top: 20px; /* Add space above social icons */
+    }
+
+    .social-links li {
+        margin: 0 15px; /* Add margin between social icons */
     }
 }
 
@@ -133,7 +163,6 @@ nav ul li a {
         max-width: 350px; /* Smaller max width for phones */
     }
 }
-
 
 /* About Section Styling */
 .about-block {
@@ -203,6 +232,8 @@ nav ul li a {
 @media (max-width: 480px) {
     nav {
         padding: 15px 5%; /* Reduce padding for smaller devices */
+        flex-direction: column; /* Stack navigation items */
+        align-items: center; /* Center navigation items */
     }
 
     nav ul li a {
