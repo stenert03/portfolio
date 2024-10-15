@@ -1,219 +1,63 @@
-/* Global Styles */
-* {
-    margin: 0; /* Reset global margin */
-    padding: 0; /* Reset global padding */
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Carlos Stenert</title>
+    <link rel="stylesheet" href="Style.css"> <!-- Use the same CSS file -->
+</head>
+<body style="background-color: rgb(135, 173, 188);">
+    <nav>
+        <img src="Design/FullLogo.png" class="logo">
+        <ul>
+            <li><a href="index.html">PORTFOLIO</a></li>  <!-- Link back to Home -->
+            <li><a href="aboutMe.html">ABOUT</a></li>  <!-- You are on About Me -->
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
 
-/* Navigation Bar Styling */
-nav {
-    padding: 15px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;  /* Allows wrapping when the screen is smaller */
-}
+    <section class="about-me">
+        <div class="about-block">
+            <img src="Images/DSC_0890.JPG" alt="Image Description" class="about-image">
+            <p class="about-text"> Hello there, I'm Carlos! Originally from Brazil, I've been living in Portugal for the past three 
+                years. Currently majoring in Business, but in 2024, I discovered a new passion: photography and photo editing.
+                 Combining this with some coding knowledge, I dicided to create this website from scratch as I thought it would be a
+                 fun way to showcase my work and share what I love doing! 
+                 </p>
+        </div>
 
-.logo {
-    width: 100%;
-    max-width: 200px;  /* Adjust the logo size for better responsiveness */
-    height: auto;
-}
-
-/* Navigation Menu */
-nav ul {
-    display: flex;
-    list-style: none;  /* Remove bullets from list items */
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 400;
-    font-size: 16px; /* Adjust font size for better readability */
-}
-
-/* General Menu Styles */
-.pages {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pages li {
-    position: relative; /* This allows the dropdown to be positioned relative to the parent item */
-    margin: 0px 0px;
-}
-
-.pages a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-    display: block;
-    transition: color 0.3s ease;
-}
-
-/* Hover Effect for Menu Items */
-.pages a:hover {
-    color: #842424;
-}
-
-/* Dropdown Content Hidden Initially */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    top: 100%; /* Position it just below the portfolio item */
-    left: -40px;
-    min-width: 160px; /* Set a minimum width for the dropdown */
-    z-index: 1; /* Ensure the dropdown is on top of other elements */
-}
-
-.dropdown-content li {
-    margin: 0; /* Remove any margin from dropdown items */
-}
-
-.dropdown-content li a {
-    padding: 5px 0px; /* Add padding to dropdown links */
-    color: #333; /* Set text color for dropdown links */
-    white-space: nowrap; /* Prevent text from wrapping */
-}
-
-.dropdown-content li a:hover {
-     /* Change background on hover */
-    color: white; /* Change text color on hover */
-}
-
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-content {
-    display: block; /* Show the dropdown when hovering over portfolio */
-}
-
-/* Image Container */
-/* Image Container */
-.image-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
-    gap: 20px; /* Add some space between columns and rows */
-    justify-items: center; /* Center the images horizontally */
-}
-
-.picture1, .picture2, .picture3, .picture4 {
-    width: 80%; /* Reduce image width to 80% of their container */
-    max-width: 600px; /* Ensure images don't get too large */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0;
-}
-
-/* Responsive Layout for smaller screens */
-@media (max-width: 768px) {
-    .image-container {
-        grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
-    }
+        <div class="about-block">
+            <p class="about-text">I've always loved taking pictures, but they were always with my phone. 
+                That all changed when I found a family camera that wasn't used very often. At the time, I was on vacation in 
+                Brazil and decided to bring the Nikon camera back to Portugal. While waiting for college to start, 
+                I decided to take the camera for a spin and went to the center of Lisbon to take some photos. While I love 
+                taking every tye of picture, going to the city center made me realize how much I enjoy street 
+                photography—capturing candid moments of strangers in their everyday lives.</p>
+            <img src="path/to/image2.jpg" alt="Image Description" class="about-image">
+        </div>
     
-    .picture1, .picture2, .picture3, .picture4 {
-        width: 90%; /* Increase image width slightly for smaller screens */
-        max-width: 400px; /* Ensure images don't become too large on mobile */
-        margin: 0; /* Reset margins for smaller screens */
-    }
-}
+        <div class="about-block">
+            <img src="path/to/image3.jpg" alt="Image Description" class="about-image">
+            <p class="about-text">More information about your photography journey.</p>
+    </section>
 
-/* Add responsiveness for ultra small screens (phones) */
-@media (max-width: 480px) {
-    .picture1, .picture2, .picture3, .picture4 {
-        width: 100%; /* Full width for very small screens */
-        max-width: 350px; /* Smaller max width for phones */
-    }
-}
-
-
-/* About Section Styling */
-.about-block {
-    display: flex;
-    flex-direction: column; /* Stack content vertically on smaller screens */
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.about-text {
-    font-size: 18px;
-    color: #333;
-    padding: 20px;
-}
-
-.about-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin: 20px 0;
-}
-
-/* Icon Styles */
-.instagram, .pinterest, .linkedin {
-    width: 40px; /* Uniform icon size */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* General List Styling for Centering */
-.pages, .social-links {
-    display: flex; /* Use Flexbox for centering */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    list-style: none; /* Remove bullet points */
-    margin: 20px 0;
-    padding: 10px;
-}
-
-/* List Item Spacing */
-.pages li, .social-links li {
-    margin: 0 50px;
-}
-
-/* Links Styling */
-.pages li a, .social-links li a {
-    text-decoration: none;
-    font-weight: 400;
-    color: #333;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-/* Hover Effect */
-.pages li a:hover, .social-links li a:hover {
-    color: #ffffff;
-}
-
-/* Flexbox Container */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Add responsiveness for ultra small screens (phones) */
-@media (max-width: 480px) {
-    nav {
-        padding: 15px 5%; /* Reduce padding for smaller devices */
-    }
-
-    nav ul li a {
-        font-size: 14px; /* Reduce font size for navigation links */
-    }
-
-    .about-text {
-        font-size: 16px; /* Smaller text on mobile */
-    }
+    <div class="container">
+        <nav>
+            <ul class="pages">
+                <li><a href="index.html">PORTFOLIO</a></li>
+                <li><a href="aboutMe.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
     
-    .instagram, .pinterest, .linkedin {
-        width: 30px; /* Smaller icons for mobile */
-    }
-}
+        <nav>
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/carlos_stenert/" target="_blank"><img class="instagram" src="Images/toppng.com-free-black-bold-instagram-logo-png-3814x3187.png" alt="Instagram"></a></li>
+                <li><a href="https://pt.pinterest.com/carloStenert/" target="_blank"><img class="pinterest" src="Images/toppng.com-white-pinterest-logo-icon-pinterest-980x980.png" alt="Pinterest"></a></li>
+                <li><a href="https://linkedin.com/in/carlos-stenert-oliveira-3aa6bb223" target="_blank"><img class="linkedin" src="Images/toppng.com-linkedin-square-logo-comments-linkedin-icon-black-981x981.png" alt="LinkedIn"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+</html>
