@@ -8,7 +8,7 @@
 
 /* Navigation Bar Styling */
 nav {
-    padding: 15px 10%;
+    padding: 40px 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,8 +17,9 @@ nav {
 
 .logo {
     width: 100%;
-    max-width: 200px; /* Adjust the logo size for better responsiveness */
+    max-width: 300px; /* Adjust the logo size for better responsiveness */
     height: auto;
+    padding-top: 14px;
 }
 
 /* Navigation Menu */
@@ -59,11 +60,6 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-/* Hover Effect for Menu Items */
-.pages a:hover {
-    color: #842424;
-}
-
 /* Dropdown Content Hidden Initially */
 .dropdown-content {
     display: none;
@@ -72,8 +68,8 @@ nav ul li a {
     padding: 0;
     margin: 0;
     top: 100%; /* Position it just below the portfolio item */
-    left: -40px;
-    min-width: 160px; /* Set a minimum width for the dropdown */
+    left: -40px; /* Original left position */
+    min-width: 0px; /* Set a minimum width for the dropdown */
     z-index: 1; /* Ensure the dropdown is on top of other elements */
 }
 
@@ -120,6 +116,11 @@ nav ul li a {
         padding: 20px; /* Add some padding around the header */
     }
 
+    .image-container{
+        margin-top: 70px; /* Adjust as needed for more space */
+    
+    }
+
     nav ul.pages {
         flex-direction: column; /* Stack navigation links vertically */
         align-items: center; /* Center the links */
@@ -153,6 +154,11 @@ nav ul li a {
 
     .social-links li {
         margin: 0 15px; /* Add margin between social icons */
+    }
+
+    /* Adjust dropdown for smaller screens */
+    .dropdown-content {
+        left: 9px; /* Reset left position to 0 for smaller screens */
     }
 }
 
@@ -248,3 +254,52 @@ nav ul li a {
         width: 30px; /* Smaller icons for mobile */
     }
 }
+
+.about-container {
+    display: flex; /* Use flexbox to align image and text */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px; /* Add padding around the container */
+}
+
+.about-image {
+    width: 100%; /* Adjust width for a larger image */
+    max-width: 500px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.about-text {
+    width: 70%; /* Keep this to take up the remaining space */
+    color: black;
+    display: flex;
+    flex-direction: column; /* Stack the rows vertically */
+}
+
+.text-row {
+    display: flex; /* Display the sections in a row */
+    justify-content: space-between; /* Space out the sections evenly */
+    margin-bottom: 20px; /* Add some space between the rows */
+}
+
+.text-section {
+    flex: 1; /* Allow each section to take up equal space */
+    margin-right: 100px; /* Add some space between the two sections */
+    margin-bottom: 40px; /* Space between sections - can keep or adjust as needed */
+}
+
+.text-section:last-child {
+    margin-right: 0; /* Remove margin for the last section */
+}
+
+h2 {
+    font-size: 1.5em; /* Adjust heading size */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+p {
+    font-size: 1em; /* Adjust paragraph size */
+    text-align: justify;
+    line-height: 1.5; /* Adjust line height for better readability */
+}
+
+
