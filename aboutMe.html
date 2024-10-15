@@ -3,44 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Carlos Stenert</title>
+    <title>About</title>
     <link rel="stylesheet" href="Style.css"> <!-- Use the same CSS file -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .about-container {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center vertically */
+            justify-content: flex-start; /* Align items to the left */
+            margin: 20px; /* Add some margin */
+        }
+        .about-image {
+            max-width: 50%; /* Adjust the width as needed */
+            margin-right: 20px; /* Space between image and text */
+        }
+        .about-text {
+            text-align: justify; /* Change to left, center, or right as needed */
+            line-height: 1.5; /* Adjust line height for better readability */
+        }
+    </style>
+    
 </head>
 <body style="background-color: rgb(135, 173, 188);">
     <nav>
         <img src="Design/FullLogo.png" class="logo">
-        <ul>
-            <li><a href="index.html">PORTFOLIO</a></li>  <!-- Link back to Home -->
-            <li><a href="aboutMe.html">ABOUT</a></li>  <!-- You are on About Me -->
-            <li><a href="#">CONTACT</a></li>
+    
+        <ul class="pages">
+            <li><a href="aboutMe.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li class="dropdown">
+                <a href="index.html">PORTFOLIO</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">B&W</a></li>
+                    <li><a href="#">ARCHITECTURE</a></li>
+                    <li><a href="#">PEOPLE</a></li>
+                    <li><a href="#">NATURE</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
-    <section class="about-me">
-        <div class="about-block">
-            <img src="Images/DSC_0890.JPG" alt="Image Description" class="about-image">
-            <p class="about-text"> Hello there, I'm Carlos! Originally from Brazil, I've been living in Portugal for the past three 
-                years. Currently majoring in Business, but in 2024, I discovered a new passion: photography and photo editing.
-                 Combining this with some coding knowledge, I dicided to create this website from scratch as I thought it would be a
-                 fun way to showcase my work and share what I love doing! 
-                 </p>
+    <div class="about-container">
+        <img src="Images/DSC_0890.JPG" alt="Image of Carlos" class="about-image">
+        <div class="about-text">
+            <div class="text-row">
+                <div class="text-section">
+                    <h2>A Little Bit About Me</h2>
+                    <p>Hi there, I'm Carlos! Originally from Brazil, I've been embracing life in Portugal for the past three years while pursuing my college degree in business. My passion for photography spans various styles, but it's street photography that truly fuels my creativity and inspires me to capture the vibrant stories of everyday life.</p>
+                </div>
+                <div class="text-section">
+                    <h2>My Passions</h2>
+                    <p>In addition to photography, I have a deep passion for exploring various forms of art, with music playing a significant role in my life. My love for music has led me to play several instruments, including the guitar and cavaquinho, as well as trying my hand at singing. Alongside my musical interests, I have always been an active person. I make it a point to stay up every week with my brother to watch my favorite Brazilian football team, Internacional, and I actively participate in football and running, having already completed two half marathons!</p>                
+                </div>
+            </div>
+            <div class="text-row">
+                <div class="text-section">
+                    <h2>How it all started</h2>
+                    <p>I've always loved taking pictures as a way to capture moments and hold onto them forever, but until recently, I had only used my phone. In 2024, while visiting my parents in Brazil, I discovered an old Nikon camera bought while we were living in Japan, hiding in the closet and decided to bring it back with me to Lisbon. Before my college classes began, I ventured into the city center to give the camera a try. That’s when I discovered my new passion: photography. Along with this newfound love, my interest in Photoshop and photo editing grew, prompting me to learn these skills and incorporate them into my journey.</p>                
+                </div>
+                <div class="text-section">
+                    <h2>Building this website</h2>
+                    <p>With these new passions, I began to think of ways to showcase my talent. Before creating this website, I posted all my photos on Instagram, which was enjoyable, but I wanted a special place to display some of my best work. That’s when I decided to learn a bit of HTML and CSS to build my personal website. I hope to make it more elaborate in the future, but this was already a significant step. If you’re interested in my work, you can click on the portfolio section to see the different albums. Additionally, if you’d like to collaborate, feel free to reach out through any of my social media links at the bottom of the page!</p>                
+                </div>
+            </div>
         </div>
-
-        <div class="about-block">
-            <p class="about-text">I've always loved taking pictures, but they were always with my phone. 
-                That all changed when I found a family camera that wasn't used very often. At the time, I was on vacation in 
-                Brazil and decided to bring the Nikon camera back to Portugal. While waiting for college to start, 
-                I decided to take the camera for a spin and went to the center of Lisbon to take some photos. While I love 
-                taking every tye of picture, going to the city center made me realize how much I enjoy street 
-                photography—capturing candid moments of strangers in their everyday lives.</p>
-            <img src="path/to/image2.jpg" alt="Image Description" class="about-image">
-        </div>
+    </div>
     
-        <div class="about-block">
-            <img src="path/to/image3.jpg" alt="Image Description" class="about-image">
-            <p class="about-text">More information about your photography journey.</p>
-    </section>
-
+    
     <div class="container">
         <nav>
             <ul class="pages">
