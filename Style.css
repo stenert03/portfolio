@@ -1,7 +1,7 @@
 /* Global Styles */
 * {
-    margin: 10px;
-    padding: 10px;
+    margin: 0; /* Reset global margin */
+    padding: 0; /* Reset global padding */
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -17,9 +17,8 @@ nav {
 
 .logo {
     width: 100%;
-    max-width: 300px;  /* Make the logo responsive */
+    max-width: 200px;  /* Adjust the logo size for better responsiveness */
     height: auto;
-    margin: 20px 0 0 20px;
 }
 
 /* Navigation Menu */
@@ -29,98 +28,138 @@ nav ul {
 }
 
 nav ul li {
-    margin: 10px 15px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 400;
+    font-size: 16px; /* Adjust font size for better readability */
+}
+
+/* General Menu Styles */
+.pages {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pages li {
+    position: relative; /* This allows the dropdown to be positioned relative to the parent item */
+    margin: 0px 0px;
+}
+
+.pages a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Menu Items */
+.pages a:hover {
+    color: #842424;
+}
+
+/* Dropdown Content Hidden Initially */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%; /* Position it just below the portfolio item */
+    left: -40px;
+    min-width: 160px; /* Set a minimum width for the dropdown */
+    z-index: 1; /* Ensure the dropdown is on top of other elements */
+}
+
+.dropdown-content li {
+    margin: 0; /* Remove any margin from dropdown items */
+}
+
+.dropdown-content li a {
+    padding: 5px 0px; /* Add padding to dropdown links */
+    color: #333; /* Set text color for dropdown links */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown-content li a:hover {
+     /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown when hovering over portfolio */
 }
 
 /* Image Container */
+/* Image Container */
 .image-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
     gap: 20px; /* Add some space between columns and rows */
     justify-items: center; /* Center the images horizontally */
 }
 
-/* Individual Pictures Styling */
-.picture1 { /* EDU */
-    grid-column: span 2; /* Make Picture 1 take up both columns */
-    width: 98.8%;
-    max-width: 1900px;
-    height: auto;
-    margin: 55px;
+.picture1, .picture2, .picture3, .picture4 {
+    width: 80%; /* Reduce image width to 80% of their container */
+    max-width: 600px; /* Ensure images don't get too large */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0;
 }
 
-/* Manual adjustments for each picture */
-.picture2 { /* GONCALO */
-    width: 100%; /* Set custom width for Picture 2 */
-    max-width: 400px; /* You can control the max width */
-    height: auto;
-    margin-left: 50px; /* Adjust the left margin manually */
-}
-
-.picture3 { /* 25 */
-    width: 100%; /* Set custom width for Picture 3 */
-    max-width: 750px; /* Control max width */
-    height: auto;
-    margin-right: 40px; /* Adjust the right margin manually */
-}
-
-.picture4 { /* BOY */
-    width: 100%; /* Set custom width for Picture 4 */
-    max-width: 750px;
-    height: auto;
-    margin-left: 40px; /* Adjust the left margin manually */
-}
-
-.picture5 { /* PAINTER */
-    width: 100%; /* Set custom width for Picture 5 */
-    max-width: 400px;
-    height: auto;
-    margin-right: 50px; /* Adjust the right margin manually */
-}
-
-
+/* Responsive Layout for smaller screens */
 @media (max-width: 768px) {
     .image-container {
         grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
     }
-/* Reset margins for smaller screens */
-.picture2, .picture3, .picture4, .picture5 {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%; /* Make images full width on mobile */
-}
+    
+    .picture1, .picture2, .picture3, .picture4 {
+        width: 90%; /* Increase image width slightly for smaller screens */
+        max-width: 400px; /* Ensure images don't become too large on mobile */
+        margin: 0; /* Reset margins for smaller screens */
+    }
 }
 
+/* Add responsiveness for ultra small screens (phones) */
+@media (max-width: 480px) {
+    .picture1, .picture2, .picture3, .picture4 {
+        width: 100%; /* Full width for very small screens */
+        max-width: 350px; /* Smaller max width for phones */
+    }
+}
+
+
+/* About Section Styling */
 .about-block {
     display: flex;
+    flex-direction: column; /* Stack content vertically on smaller screens */
     align-items: center;
-    margin: -50px 0;
+    text-align: center;
+    padding: 20px;
 }
 
 .about-text {
-    flex: 1;
-    padding: 20px;
     font-size: 18px;
     color: #333;
+    padding: 20px;
 }
 
 .about-image {
-    width: 100%; /* Set custom width for Picture 2 */
-    max-width: 500px; /* You can control the max width */
+    width: 100%;
+    max-width: 400px;
     height: auto;
-    margin-left: 50px; /* Adjust the left margin manually */
+    margin: 20px 0;
 }
-
 
 /* Icon Styles */
 .instagram, .pinterest, .linkedin {
-    width: 50px; /* Uniform icon size */
+    width: 40px; /* Uniform icon size */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -130,32 +169,51 @@ nav ul li a {
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
     list-style: none; /* Remove bullet points */
-    margin: 20px 0; /* Adjust vertical margin */
-    padding: 0; /* Remove padding */
+    margin: 20px 0;
+    padding: 10px;
 }
 
 /* List Item Spacing */
 .pages li, .social-links li {
-    margin: 0 15px; /* Space between list items */
+    margin: 0 50px;
 }
 
 /* Links Styling */
 .pages li a, .social-links li a {
-    text-decoration: none; /* Remove underline */
-    font-weight: 400; /* Font weight */
-    color: #333; /* Text color */
-    transition: color 0.3s ease; /* Hover effect */
+    text-decoration: none;
+    font-weight: 400;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 /* Hover Effect */
 .pages li a:hover, .social-links li a:hover {
-    color: #842424; /* Hover color */
+    color: #ffffff;
 }
 
 /* Flexbox Container */
 .container {
-    display: flex;               /* Flexbox for layout */
-    flex-direction: column;      /* Stack items vertically */
-    align-items: center;        /* Center items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Add responsiveness for ultra small screens (phones) */
+@media (max-width: 480px) {
+    nav {
+        padding: 15px 5%; /* Reduce padding for smaller devices */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Reduce font size for navigation links */
+    }
+
+    .about-text {
+        font-size: 16px; /* Smaller text on mobile */
+    }
+    
+    .instagram, .pinterest, .linkedin {
+        width: 30px; /* Smaller icons for mobile */
+    }
+}
