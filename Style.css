@@ -1,0 +1,161 @@
+/* Global Styles */
+* {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar Styling */
+nav {
+    padding: 15px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;  /* Allows wrapping when the screen is smaller */
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px;  /* Make the logo responsive */
+    height: auto;
+    margin: 20px 0 0 20px;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    list-style: none;  /* Remove bullets from list items */
+}
+
+nav ul li {
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Image Container */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Add some space between columns and rows */
+    justify-items: center; /* Center the images horizontally */
+}
+
+/* Individual Pictures Styling */
+.picture1 { /* EDU */
+    grid-column: span 2; /* Make Picture 1 take up both columns */
+    width: 98.8%;
+    max-width: 1900px;
+    height: auto;
+    margin: 55px;
+}
+
+/* Manual adjustments for each picture */
+.picture2 { /* GONCALO */
+    width: 100%; /* Set custom width for Picture 2 */
+    max-width: 400px; /* You can control the max width */
+    height: auto;
+    margin-left: 50px; /* Adjust the left margin manually */
+}
+
+.picture3 { /* 25 */
+    width: 100%; /* Set custom width for Picture 3 */
+    max-width: 750px; /* Control max width */
+    height: auto;
+    margin-right: 40px; /* Adjust the right margin manually */
+}
+
+.picture4 { /* BOY */
+    width: 100%; /* Set custom width for Picture 4 */
+    max-width: 750px;
+    height: auto;
+    margin-left: 40px; /* Adjust the left margin manually */
+}
+
+.picture5 { /* PAINTER */
+    width: 100%; /* Set custom width for Picture 5 */
+    max-width: 400px;
+    height: auto;
+    margin-right: 50px; /* Adjust the right margin manually */
+}
+
+
+@media (max-width: 768px) {
+    .image-container {
+        grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
+    }
+/* Reset margins for smaller screens */
+.picture2, .picture3, .picture4, .picture5 {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%; /* Make images full width on mobile */
+}
+}
+
+.about-block {
+    display: flex;
+    align-items: center;
+    margin: -50px 0;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.about-image {
+    width: 100%; /* Set custom width for Picture 2 */
+    max-width: 500px; /* You can control the max width */
+    height: auto;
+    margin-left: 50px; /* Adjust the left margin manually */
+}
+
+
+/* Icon Styles */
+.instagram, .pinterest, .linkedin {
+    width: 50px; /* Uniform icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* General List Styling for Centering */
+.pages, .social-links {
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    list-style: none; /* Remove bullet points */
+    margin: 20px 0; /* Adjust vertical margin */
+    padding: 0; /* Remove padding */
+}
+
+/* List Item Spacing */
+.pages li, .social-links li {
+    margin: 0 15px; /* Space between list items */
+}
+
+/* Links Styling */
+.pages li a, .social-links li a {
+    text-decoration: none; /* Remove underline */
+    font-weight: 400; /* Font weight */
+    color: #333; /* Text color */
+    transition: color 0.3s ease; /* Hover effect */
+}
+
+/* Hover Effect */
+.pages li a:hover, .social-links li a:hover {
+    color: #842424; /* Hover color */
+}
+
+/* Flexbox Container */
+.container {
+    display: flex;               /* Flexbox for layout */
+    flex-direction: column;      /* Stack items vertically */
+    align-items: center;        /* Center items horizontally */
+}
+
