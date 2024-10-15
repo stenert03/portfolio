@@ -135,8 +135,16 @@ nav ul li a {
         grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
     }
 
-    .picture1, .picture2, .picture3, .picture4 {
-        width: 90%; /* Increase image width slightly for smaller screens */
+    .picture1 .picture4 {
+        height: 60%;
+        width: auto;
+        max-width: 400px;
+        margin: 0;
+
+    }
+    
+    .picture2, .picture3 {
+        width: 70%; /* Increase image width slightly for smaller screens */
         max-width: 400px; /* Ensure images don't become too large on mobile */
         margin: 0; /* Reset margins for smaller screens */
     }
@@ -275,6 +283,30 @@ nav ul li a {
     flex-direction: column; /* Stack the rows vertically */
 }
 
+/* Responsive Layout for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack the image and text vertically */
+        align-items: center; /* Center the content */
+    }
+
+    .about-image {
+        margin-right: 0; /* Remove the right margin */
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+
+    .text-row {
+        flex-direction: column; /* Stack paragraphs vertically */
+        width: 100%; /* Ensure the paragraphs take up the full width */
+        margin-bottom: 20px; /* Space between stacked paragraphs */
+    }
+
+    .text-section {
+        margin-right: 0; /* Remove the right margin between sections */
+        width: 100%; /* Make each text section full width */
+        margin-bottom: 20px; /* Add space between sections */
+    }
+}
 .text-row {
     display: flex; /* Display the sections in a row */
     justify-content: space-between; /* Space out the sections evenly */
