@@ -293,6 +293,7 @@ nav ul li a {
     .about-image {
         margin-right: 0; /* Remove the right margin */
         margin-bottom: 20px; /* Add some space below the image */
+        margin-top: 40px;
     }
 
     .text-row {
